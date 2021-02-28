@@ -1,0 +1,52 @@
+﻿<Window x:Class="MainCode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainCode"
+        
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Ball and Plate Application" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" Icon="image/LogoSPKT.png"
+        Loaded="Window_Loaded">
+    <DockPanel>
+        <materialDesign:ColorZone DockPanel.Dock="Top" Mode="PrimaryMid" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock VerticalAlignment="Center" Foreground="#FFFF33" FontSize="20"  FontFamily="Arial" FontStyle="Italic" FontWeight="Bold">
+                        Design and Control Ball-Plate System Final Project Report
+                </TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <StackPanel DockPanel.Dock="Left" Width="130" Background="#FFF0F0F0" >
+            <Image Source="/image/IsLab.png" Stretch="Fill" />
+            <RadioButton x:Name="IntroductionButton"
+                Margin="4,20,2,0"
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Checked="IntroductionButton_Checked"
+                ToolTip="Resource name: MaterialDesignRaisedButton"
+                Foreground="#FFFF33" >
+
+                Introduction
+            </RadioButton>
+            <RadioButton x:Name="ImageControlButton"
+                Margin="4,20,2,0"
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Checked="ImageControlButton_Checked"
+                ToolTip="Resource name: MaterialDesignRaisedButton"
+                         Foreground="#FFFF33" >
+                Main Control
+            </RadioButton>
+        </StackPanel>
+        <Frame x:Name="MainFrame" DockPanel.Dock="Left" NavigationUIVisibility="Hidden">
+
+        </Frame>
+    </DockPanel>
+</Window>
